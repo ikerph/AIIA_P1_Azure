@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kabukichō, Japan Live Detector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+        h1, h2 { text-align: center; margin: 5px; }
+        h2 { font-weight: normal; color: #666; }
+        .container { display: flex; gap: 20px; margin-top: 20px; }
+        .box { flex: 1; background: white; padding: 15px; border-radius: 10px; }
+        img { width: 100%; border-radius: 5px; }
+        table { width: 100%; margin-top: 15px; border-collapse: collapse; }
+        td { padding: 6px; border-bottom: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <h1>Kabukichō Live Detector</h1>
+    <h2>Iker Pacheco & Angela Nescolarde · Azure VM</h2>
+
+    <div class="container">
+        <div class="box">
+            <h3>Camera</h3>
+            <img id="reloadImage" src="processed_frame.jpg" alt="Reloaded Image">
+            <table>
+                <tr><td>Frames processed</td><td id="statFrames">-</td></tr>
+                <tr><td>Average people per frame</td><td id="statAvg">-</td></tr>
+                <tr><td>Max people in a frame</td><td id="statMax">-</td></tr>
+                <tr><td>Average inference time</td><td id="statInference">-</td></tr>
+                <tr><td>VM CPU usage (last frame)</td><td id="statCpu">-</td></tr>
+                <tr><td>VM RAM in use (last frame)</td><td id="statRam">-</td></tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>Person Count Graph</h3>
+            <canvas id="personCountChart"></canvas>
+            <h3>Histogram</h3>
+            <canvas id="histogramChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Include your JavaScript code here -->
+    <script src="script.js"></script>
+</body>
+</html>

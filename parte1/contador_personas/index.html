@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kabukichō, Japan Live Detector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+        h1, h2 { text-align: center; margin: 5px; }
+        h2 { font-weight: normal; color: #666; }
+        .container { display: flex; gap: 20px; margin-top: 20px; }
+        .box { flex: 1; background: white; padding: 15px; border-radius: 10px; }
+        img { width: 100%; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Kabukichō Live Detector</h1>
+    <h2>Iker Pacheco & Angela Nescolarde</h2>
+
+    <div class="container">
+        <div class="box">
+            <h3>Camera</h3>
+            <img id="reloadImage" src="processed_frame.jpg">
+        </div>
+        <div class="box">
+            <h3>Person Count Graph</h3>
+            <canvas id="personCountChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Include your JavaScript code here -->
+    <script src="script.js"></script>
+</body>
+</html>

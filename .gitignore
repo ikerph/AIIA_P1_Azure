@@ -1,0 +1,18 @@
+# Claves
+*.pem
+local.settings.json
+.env
+
+# Python
+.venv/
+venv/
+__pycache__/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
